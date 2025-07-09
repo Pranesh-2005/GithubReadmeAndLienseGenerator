@@ -41,7 +41,7 @@ export default function ReadmeGenerator() {
     setLicenseContent("")
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/generate", {
+      const response = await fetch("https://readmeandlicensegenerator.onrender.com/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -158,7 +158,7 @@ export default function ReadmeGenerator() {
                 </Label>
                 <Input
                   id="username"
-                  placeholder="your-username"
+                  placeholder="your-name"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   className="h-11"
