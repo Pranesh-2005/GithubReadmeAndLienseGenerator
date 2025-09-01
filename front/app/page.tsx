@@ -12,6 +12,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
 import { Copy, Download, Github, FileText, Scale, Loader2, CheckCircle, AlertCircle } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
+import { Client } from "@gradio/client"
 
 export default function ReadmeGenerator() {
   const [repoUrl, setRepoUrl] = useState("")
@@ -41,30 +42,26 @@ export default function ReadmeGenerator() {
     setLicenseContent("")
 
     try {
-      const response = await fetch("https://readmeandlicensegenerator.onrender.com/generate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          repo_url: repoUrl,
-          username: username,
-          license_type: licenseType || "MIT",
-        }),
+      const client = await Client.connect("PraneshJs/ReadmeandLicenseGithub")
+
+      const result = await client.predict("/predict", {
+        repo_url: repoUrl,
+        username: username,
+        license_type: licenseType || "MIT",
       })
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
+      // explicitly cast to string[]
+      const data = result.data as string[]
 
-      const data = await response.json()
-      setReadmeContent(data.readme)
-      setLicenseContent(data.license)
+      setReadmeContent(data[0] || "")
+      setLicenseContent(data[1] || "")
 
       toast({
         title: "Generation Complete!",
         description: "Your README and LICENSE files have been generated successfully.",
       })
-    } catch (error) {
-      console.error(error)
+    } catch (err) {
+      console.error(err)
       setError("Failed to generate files. Please check your connection and try again.")
       toast({
         title: "Generation Failed",
