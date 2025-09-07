@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://readmegeneratorgithub.vercel.app
+
+# Sitemaps
+Sitemap: https://readmegeneratorgithub.vercel.app/sitemap.xml
