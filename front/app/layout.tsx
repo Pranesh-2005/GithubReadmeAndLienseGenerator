@@ -4,7 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Readme and License Generator',
   description: 'Readme and License Generator for GitHub projects using Azure OpenAI',
-  keywords: ['readme', 'license', 'generator', 'github', 'github readme', 'github license', 'project-readme','project-license','github project readme','github project license','readme generator','license generator','readme ai','license ai','repo readme','repo license','repository readme','repository license','readme creator','license creator','readme maker','license maker','readme writer','license writer','readme assistant','license assistant','readme tool','license tool'],
+  keywords: ['readme', 'license', 'generator', 'github', 'github readme', 'github license', 'project-readme','project-license','github project readme','github project license','readme generator','license generator','readme ai','license ai','repo readme','repo license','repository readme','repository license','readme creator','license creator','readme maker','license maker','readme writer','license writer','readme assistant','license assistant','readme tool','license tool','project documentation','project docs','github docs','github documentation','repo docs','repo documentation','repository docs','repository documentation','readme template','license template','readme example','license example','readme sample','license sample','project readme generator','project license generator','github readme generator','github license generator','repo readme generator','repo license generator','repository readme generator','repository license generator','readme ai generator','license ai generator'],
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
