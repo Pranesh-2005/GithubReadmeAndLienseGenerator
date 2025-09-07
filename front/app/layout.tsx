@@ -48,6 +48,9 @@ export const metadata: Metadata = {
     'msapplication-TileColor': '#2d89ef',
     'msapplication-TileImage': '/mstile-144x144.png',
     'msapplication-config': '/browserconfig.xml'
+  },
+  verification: {
+    google: '9c9WJrB6k1_0JHlUx3V8JNS7B5t4OGt8asr9IeJZhkM'
   }
 }
 
