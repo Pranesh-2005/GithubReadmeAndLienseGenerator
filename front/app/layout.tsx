@@ -4,6 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Readme and License Generator',
   description: 'Readme and License Generator for GitHub projects using Azure OpenAI',
+  keywords: ['readme', 'license', 'generator', 'github', 'github readme', 'github license', 'project-readme','project-license','github project readme','github project license','readme generator','license generator','readme ai','license ai','repo readme','repo license','repository readme','repository license','readme creator','license creator','readme maker','license maker','readme writer','license writer','readme assistant','license assistant','readme tool','license tool'],
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
